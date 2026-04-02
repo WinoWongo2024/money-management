@@ -13,7 +13,7 @@ function updateBalance() {
     const total = transactions.reduce((acc, transaction) => {
         return transaction.type === 'income' ? acc + parseFloat(transaction.amount) : acc - parseFloat(transaction.amount);
     }, 0);
-    currentBalance.textContent = '$' + total.toFixed(2);
+    currentBalance.textContent = '£' + total.toFixed(2);
 }
 
 // Function to add a transaction to the DOM
